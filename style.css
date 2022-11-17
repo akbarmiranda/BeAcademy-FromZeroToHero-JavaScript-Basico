@@ -1,0 +1,80 @@
+/* Aqui, zeramos as margens (margin) e o 
+espaço entre os elementos da página (padding)
+o simbolo '*' é para selecionar todos os elementos
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+/*Aqui se instancia e formata a classe fundo criada no Html
+  Foi escohido um gradiente linear como fundo da página
+  partindo de um roxo mais claro para um mais escuro
+  a cor do texto foi escolhida a branca e as fontes as que estão
+  indicadas abaixo
+*/
+
+.fundo {
+  background-image: linear-gradient(45deg, rgb(127, 79, 190), rgb(79, 42, 165));
+  height: 100vh;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+/*Aqui se instancia e formata a classe calculadora criada no Html
+  Foi escohido a posição absolute para centralizar a calculadora na tela
+  a distância do topo e da margen foi dada em porcentagem (50%) para centraizar
+  a calculadora no sentindo vertical, independente da resolução do dispositivo 
+  que está abrindo a página. o atributo "transform: translate", tem haver com a 
+  translação 2D do classe calculadora garantindo o seu posicionamento no meio 
+  da página com "-50%", para o eixo x e para o eixo y. Se você mudar os valores
+  percebera que a calculadora se movera na tela. "border-radius" dá uma espessura
+  para as bordas e o padding a distancia entre os botões da calculadora
+*/
+
+.calculadora {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 15px;
+}
+/*Aqui se instancia e formata a classe botao criada no Html
+  Foi escohido um fundo próximo da cor preta para os botões determinando uma
+  margem entre o que está escrito no botão e suas bordas, optou-se
+  por não haver bordas no botão e a cor branca para o que aparece no botao
+*/
+
+.botao {
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  cursor: pointer;
+  margin: 3px;
+  background-color: rgb(31, 31, 31);
+  border: none;
+  color: white;
+}
+/*
+Determina o comportamento do botão ao passar o mouse por cima
+Neste caso o botão assume a cor preta
+*/
+.botao:hover {
+  background-color: black;
+}
+/*Aqui se instancia o parágrafo resultado que tem uma id de mesmo nome
+e se formata ele dando a sua largura (width), sua cor de fundo (background-color)
+sua altura (height), o tamanho da sua fonte (font-size), 
+o alinhamento do texto (text-align), a distandia dele para os outros elementos (padding)
+*/
+#resultado {
+  width: 207px;
+  background-color: white;
+  height: 30px;
+  margin: 5px;
+  font-size: 25px;
+  color: black;
+  text-align: right;
+  padding: 5px;
+}

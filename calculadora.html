@@ -1,0 +1,101 @@
+<!-- Este código foi copiado do site 
+  https://programadoresdepre.com.br/como-criar-uma-calculadora-com-html-css-e-javascript/
+  O meu trabalho aqui foi adicionar os comentários para que 
+  facilitasse possíveis estudos posteriores e ou facilitasse o 
+  entendimento de quem está aprendendo do que foi feito aqui.
+  Se deseja ver como fica o projeto só com HTML, comente as linhas
+  que fazem referência aos arquivos css e js respectivamente.
+  Se desejar ver o efeito só do HTML e css comente a linha que faz
+  referência ao arquivo js e assim por diante. Os comentários seguem
+  nos arquivos css e js correspondentes.
+-->
+
+<!DOCTYPE html>
+<html lang="pt--br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!--Aqui se faz a declaração do arquivo css do  projeto-->
+    <link rel="stylesheet" href="style.css">
+    <!--Aqui se faz a declaração do arquivo javascript do proejto-->
+    <script src="calculadora.js"></script>
+</head>
+<body>
+  <!--Aqui foi criado uma class chamada fundo para ser
+  instanciada posteriormente no arquivo css
+  -->
+    <div class="fundo">
+      <!--Criação de um título-->
+        <h1>Akbar Miranda</h1>
+        <!--Aqui foi criado uma class chamada calculadora para 
+          ser instanciada posteriormente no arquivo css  -->
+        <div class="calculadora">
+          <!--Título da calculadora-->
+            <h2>Calculadora</i></h2>
+            <!--Parágrafo aonde será inserido o resultado da 
+            operação que será realizada pelo usuário e também
+          foi criada uma identificação (id) para ele, para ser
+        instanciado no arquivo css-->
+            <p id="resultado"></p>
+            <!--Criação da nossa tabela
+                Os botões da calculadora serão criados dentro de
+                uma tabela -->
+                <table>
+                  <!--cria linhas na nossa tabela
+                    aqui está sendo criada a primeira linha com 4 colunas
+                    Aqui cada coluna será preenchida com um botão
+                    que está sendo colocado dentro de uma class chamada
+                    botao, para instanciamento no arquivo css.
+                    Observe que foi colocado o comando 'onclick' que determina
+                    o que o cique no botão irá fazer. clean =limpar
+                    back (voltar), insert (inserir)
+                  -->                 
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</td>
+                        <td><button class="botao" onclick="back()"><</td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('*')">*</button></td>
+                    </tr>
+                    <!--Segunda linha da nossa tabela -->            
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <!--Terceira linha da nossa tabela --> 
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <!--Quarta linha da nossa tabela --> 
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+                    </tr>
+                    <!--Quinta e última linha da nossa tabela 
+                        o comando colspan serve para mesclar colunas de nossa 
+                        tabela. Aqui foram mescladas 2 colunas. Foi acrescentado ao botão
+                        uma largura (width), aqui determinada em pixels (106px)
+                    --> 
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                    <!--Fim da nossa tabela
+                        Os botões estão criados com os números e funções 
+                        correspondentes a cada um aparecendo no corpo dos
+                        botões. Que repetirão para o nosso código o valor mostrado
+                        pois determinamos isso no comando insert acima.
+                    --> 
+                </table>
+        </div>
+    </div>
+</body>
+</html>
